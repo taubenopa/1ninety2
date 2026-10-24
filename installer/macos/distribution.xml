@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="2">
+    <title>1ninety-bass</title>
+    <organization>com.taubenopa</organization>
+    <domains enable_anywhere="false" enable_currentUserHome="false" enable_localSystem="true"/>
+    <options customize="never" require-scripts="false" hostArchitectures="arm64,x86_64"/>
+    <welcome file="welcome.html" mime-type="text/html"/>
+    <background file="background.png" mime-type="image/png" alignment="center" scaling="proportional"/>
+    <choices-outline>
+        <line choice="default"><line choice="com.taubenopa.ninetybass.vst3"/></line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="com.taubenopa.ninetybass.vst3" visible="false">
+        <pkg-ref id="com.taubenopa.ninetybass.vst3"/>
+    </choice>
+    <pkg-ref id="com.taubenopa.ninetybass.vst3" version="1.0.0" onConclusion="none">component.pkg</pkg-ref>
+</installer-gui-script>
